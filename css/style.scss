@@ -1,0 +1,109 @@
+:root {
+    --c1: #000000;
+    --c2: #ffffff;
+}
+
+$c1: var(--c1);
+$c2: var(--c2);
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20vh;
+    background-color: $c1;
+}
+
+.wrapper {
+    display: flex;
+
+    .digit {
+        width: 1em;
+        height: 2em;
+        margin: 0.1em;
+        position: relative;
+
+        & > span {
+            position: absolute;
+
+            &:nth-last-of-type(1) {
+                width: 1em;
+                height: 0.2em;
+                top: 0;
+                left: 0;
+            }
+
+            &:nth-last-of-type(2) {
+                width: 0.2em;
+                height: 1em;
+                top: 0;
+                right: 0;
+            }
+
+            &:nth-last-of-type(3) {
+                width: 1em;
+                height: 0.2em;
+                top: 0.9em;
+                right: 0;
+            }
+
+            &:nth-last-of-type(4) {
+                width: 0.2em;
+                height: 1em;
+                top: 0;
+                left: 0;
+            }
+
+            &:nth-last-of-type(5) {
+                width: 0.2em;
+                height: 1em;
+                bottom: 0;
+                left: 0;
+            }
+
+            &:nth-last-of-type(6) {
+                width: 0.2em;
+                height: 1em;
+                bottom: 0;
+                right: 0;
+            }
+
+            &:nth-last-of-type(7) {
+                width: 1em;
+                height: 0.2em;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        & > .span--after {
+            background-color: $c2;
+        }
+    }
+
+    .divider {
+        width: 0.2em;
+        margin: 0.1em;
+        position: relative;
+
+        & > span {
+            background-color: $c2;
+            width: 0.2em;
+            height: 0.2em;
+            position: absolute;
+
+            &:nth-of-type(1) {
+                top: 0.5em;
+                left: 0;
+            }
+
+            &:nth-of-type(2) {
+                bottom: 0.5em;
+                left: 0;
+            }
+        }
+    }
+}
